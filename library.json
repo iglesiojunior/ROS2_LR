@@ -9,9 +9,18 @@
     {
       "name": "sandeepmistry/LoRa",
       "version": "^0.8.0"
+    },
+    {
+      "name": "Wire",
+      "version": "*"
+    },
+    {
+      "name": "SPI",
+      "version": "*"
     }
   ],
   "build": {
+    "libLDFMode": "deep",
     "srcFilter": "+<src/>"
   }
 }
