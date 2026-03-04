@@ -1,0 +1,17 @@
+{
+  "name": "ROS2_LR_Protocol",
+  "version": "1.0.0",
+  "description": "Framework de comunicacao LoRa para ROS 2 e Robos",
+  "keywords": "lora, ros2, robotics, framework",
+  "frameworks": "arduino",
+  "platforms": "espressif32",
+  "dependencies": [
+    {
+      "name": "sandeepmistry/LoRa",
+      "version": "^0.8.0"
+    }
+  ],
+  "build": {
+    "srcFilter": "+<src/>"
+  }
+}
