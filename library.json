@@ -24,6 +24,6 @@
     }
   ],
   "build": {
-    "srcFilter": "+<src/>"
+    "libLDFMode": "deep"
   }
 }
