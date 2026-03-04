@@ -17,6 +17,10 @@
     {
       "name": "SPI",
       "version": "*"
+    },
+    {
+      "name": "LoRa",
+      "version": "*"
     }
   ],
   "build": {
