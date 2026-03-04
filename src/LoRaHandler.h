@@ -2,8 +2,11 @@
 #include <Arduino.h>
 #include <SPI.h>
 #include <LoRa.h>
-#include "PacketDef.h"
+#include <freertos/FreeRTOS.h>
+#include <freertos/semphr.h>
+#include "PacketDef.h" // Mantido intacto conforme a sua diretriz
 
+// Definição de Callback
 typedef void (*PacketCallback)(LoRaPacket& packet);
 
 class LoRaHandler {
@@ -12,6 +15,9 @@ private:
     uint8_t _myId;
     PacketCallback _onPacketReceived;
     TaskHandle_t _taskHandle;
+    
+    // Mutex para proteger o acesso concorrente ao rádio LoRa
+    SemaphoreHandle_t _spiMutex; 
     
     static void startTaskImpl(void* _this);
     void taskLoop();
